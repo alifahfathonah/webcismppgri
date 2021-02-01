@@ -3,12 +3,12 @@
 
 	<!-- Sidebar -->
 	<ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
-<!--	<ul class="sidebar bg-gray-900 id="accordionSidebar">-->
+		<!--	<ul class="sidebar bg-gray-900 id="accordionSidebar">-->
 
 		<!-- Sidebar - Brand -->
 		<a class="c-sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
 			<!--                <div class="sidebar-brand-icon rotate-n-15">-->
-			<img src="<?= base_url();?>assets/img/logopgri.png"/>
+			<img src="<?= base_url(); ?>assets/img/logopgri.png" />
 			<!--                </div>-->
 		</a>
 
@@ -17,14 +17,14 @@
 
 		<!-- Nav Item - Dashboard -->
 		<li class="nav-item active">
-			<a class="nav-link text-black-50"  href="index.php">
+			<a class="nav-link text-black-50" href="index.php">
 				<!--                    <i class="fas fa-fw fa-tachometer-alt"></i>-->
 				<div class="sidebar-brand-text text-light text-center">SMP PGRI 32</sup></div>
 				<div class="sidebar-brand-text text-light text-center">Jakarta Barat</div>
 		</li>
 
 		<!-- Divider -->
-<!--		<hr class="border-bottom-light">-->
+		<!--		<hr class="border-bottom-light">-->
 		<hr class="sidebar-divider border-bottom-light">
 
 		<!-- Heading -->
@@ -34,33 +34,33 @@
 
 		<!-- Nav Item - Pages Collapse Menu -->
 		<li class="nav-item">
-			<a class="nav-link btn btn-sm btn-primary shadow-sm" href="<?= base_url('User/homeinfouser');?>">
+			<a class="nav-link btn btn-sm btn-primary shadow-sm" href="<?= base_url('User/homeinfouser'); ?>">
 				<i class="fas fa-home text-light" aria-hidden="true"></i>
 				<span>Home</span>
 			</a>
 
 		</li>
 		<li class="nav-item">
-			<a class="nav-link btn-sm btn-primary" href="<?= base_url('User/register');?>">
+			<a class="nav-link btn-sm btn-primary" href="<?= base_url('User/register_psb'); ?>">
 				<i class="fas fa-pen-square text-light" aria-hidden="true"></i>
 				<span>Daftar</span>
 			</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link btn-sm btn-primary" href="<?= base_url('User/register');?>">
+			<a class="nav-link btn-sm btn-primary" href="<?= base_url('User/page_cetak'); ?>">
 				<i class="fas fa-print text-light" aria-hidden="true"></i>
 				<span>Print Daftar</span>
 			</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link btn-sm btn-primary" href="<?=base_url('User/logout');?>">
+			<a class="nav-link btn-sm btn-primary" href="<?= base_url('User/logout'); ?>">
 				<i class="fas fa-fw fa-sign-out-alt text-light" aria-hidden="true"></i>
 				<span>Logout</span></a>
 		</li>
 		<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
 			<div class="bg-white py-2 collapse-inner rounded">
 				<h6 class="collapse-header">Custom Components:</h6>
-				<a class="collapse-item" href="<?=base_url();?>User/register_page">Buttons</a>
+				<a class="collapse-item" href="<?= base_url(); ?>User/register_page">Buttons</a>
 				<a class="collapse-item" href="cards.html">Cards</a>
 			</div>
 		</div>
@@ -99,18 +99,14 @@
 
 					<!-- Nav Item - Search Dropdown (Visible Only XS) -->
 					<li class="nav-item dropdown no-arrow d-sm-none">
-						<a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-						   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<i class="fas fa-search fa-fw"></i>
 						</a>
 						<!-- Dropdown - Messages -->
-						<div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-							 aria-labelledby="searchDropdown">
+						<div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
 							<form class="form-inline mr-auto w-100 navbar-search">
 								<div class="input-group">
-									<input type="text" class="form-control bg-light border-0 small"
-										   placeholder="Search for..." aria-label="Search"
-										   aria-describedby="basic-addon2">
+									<input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
 									<div class="input-group-append">
 										<button class="btn btn-primary" type="button">
 											<i class="fas fa-search fa-sm"></i>
@@ -130,8 +126,7 @@
 						<!--                                <span class="badge badge-danger badge-counter">3+</span>-->
 						<!--                            </a>-->
 						<!-- Dropdown - Alerts -->
-						<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-							 aria-labelledby="alertsDropdown">
+						<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
 							<h6 class="dropdown-header">
 								Alerts Center
 							</h6>
@@ -181,15 +176,13 @@
 						<!--                                <span class="badge badge-danger badge-counter">7</span>-->
 						<!--                            </a>-->
 						<!-- Dropdown - Messages -->
-						<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-							 aria-labelledby="messagesDropdown">
+						<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
 							<h6 class="dropdown-header">
 								Message Center
 							</h6>
 							<a class="dropdown-item d-flex align-items-center" href="#">
 								<div class="dropdown-list-image mr-3">
-									<img class="rounded-circle" src="img/undraw_profile_1.svg"
-										 alt="">
+									<img class="rounded-circle" src="img/undraw_profile_1.svg" alt="">
 									<div class="status-indicator bg-success"></div>
 								</div>
 								<div class="font-weight-bold">
@@ -200,8 +193,7 @@
 							</a>
 							<a class="dropdown-item d-flex align-items-center" href="#">
 								<div class="dropdown-list-image mr-3">
-									<img class="rounded-circle" src="img/undraw_profile_2.svg"
-										 alt="">
+									<img class="rounded-circle" src="img/undraw_profile_2.svg" alt="">
 									<div class="status-indicator"></div>
 								</div>
 								<div>
@@ -212,8 +204,7 @@
 							</a>
 							<a class="dropdown-item d-flex align-items-center" href="#">
 								<div class="dropdown-list-image mr-3">
-									<img class="rounded-circle" src="img/undraw_profile_3.svg"
-										 alt="">
+									<img class="rounded-circle" src="img/undraw_profile_3.svg" alt="">
 									<div class="status-indicator bg-warning"></div>
 								</div>
 								<div>
@@ -224,8 +215,7 @@
 							</a>
 							<a class="dropdown-item d-flex align-items-center" href="#">
 								<div class="dropdown-list-image mr-3">
-									<img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
-										 alt="">
+									<img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="">
 									<div class="status-indicator bg-success"></div>
 								</div>
 								<div>
@@ -242,15 +232,12 @@
 
 					<!-- Nav Item - User Information -->
 					<li class="nav-item dropdown no-arrow">
-						<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-						   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-							<img class="img-profile rounded-circle"
-								 src="img/undraw_profile.svg">
+						<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<span class="mr-2 d-none d-lg-inline text-gray-600 small">Selamat Datang User </span>
+							<img class="img-profile rounded-circle" src="img/undraw_profile.svg">
 						</a>
 						<!-- Dropdown - User Information -->
-						<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-							 aria-labelledby="userDropdown">
+						<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
 							<a class="dropdown-item" href="#">
 								<i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
 								Profile

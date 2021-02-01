@@ -3,14 +3,13 @@
 
 class User_model extends CI_Model
 {
-	
+
 	public $tb_user = 'tb_user';
 	public $where_email = 'user_email';
 
 	public function register_user($user)
 	{
 		$this->db->insert($this->tb_user, $user);
-
 	}
 
 	public function email_check($email)
@@ -24,7 +23,6 @@ class User_model extends CI_Model
 		} else {
 			return true;
 		}
-
 	}
 
 	public function cek_datalogin($username, $password)
@@ -51,10 +49,10 @@ class User_model extends CI_Model
 
 	public function cektblogin($username, $password)
 	{
-		$query = $this->db->query("(SELECT * FROM tb_user WHERE  user_email = '$username' AND user_password = '$password')");
-//'user_password' = $password");
-//	return $query->num_rows();
-		if ($query->count() == 1) {
+		$query = $this->db->query("(SELECT * FROM tb_calon_siswa WHERE  user_email = '$username' AND user_password = '$password')");
+		//'user_password' = $password");
+		//	return $query->num_rows();
+		if ($query->num_rows() == 0) {
 			echo "Login";
 		} else {
 			echo "Failed";
@@ -63,55 +61,67 @@ class User_model extends CI_Model
 
 	public function ceklogintolong($email)
 	{
-		return $this->db->get_where($this->tb_user,$email);
-
+		return $this->db->get_where($this->tb_user, $email);
+	}
+	function getInfoEmail($email_akun)
+	{
+		$query = $this->db->get_where('tb_akun', array('email_akun' => $email_akun));
+		if ($this->db->affected_rows() > 0) {
+			$row = $query->row();
+			return $row;
+		} else {
+			error_log('no user found getUserInfo(' . $email_akun . ')');
+			return false;
+		}
 	}
 
 	function getinfo()
 	{
 		$query = $this->db->query("SELECT * FROM tb_informasi");
 		return $query->result();
-////		return $query->row();
-////		return $query->$this->db->get()->result_array();
-////		foreach ($query->getResult() as $row) {
-////			echo $row->judul_pengumuman;
-////			echo $row->isi_pengumuman;
-//		}
+		////		return $query->row();
+		////		return $query->$this->db->get()->result_array();
+		////		foreach ($query->getResult() as $row) {
+		////			echo $row->judul_pengumuman;
+		////			echo $row->isi_pengumuman;
+		//		}
 	}
-//	function getinfo()
-//	{
-//		$this->db->select('*');
-//		$this->db->from('tb_informasi');
-//		return $this->db->get()->result();
-//		$objek = array(
-//			'judul_pengumuman' =>
-//		);
-//	}
-//	function getinfo()
-//	{
-//		$query = $this->db->query("SELECT * FROM tb_informasi");
-//		return $query->row();
-////		return $row;
-//		$objek = array(
-//			'judul_pengumuman' => $row->judul_pengumuman
-//		);
-//		return $objek;
-//	}
+	//	function getinfo()
+	//	{
+	//		$this->db->select('*');
+	//		$this->db->from('tb_informasi');
+	//		return $this->db->get()->result();
+	//		$objek = array(
+	//			'judul_pengumuman' =>
+	//		);
+	//	}
+	//	function getinfo()
+	//	{
+	//		$query = $this->db->query("SELECT * FROM tb_informasi");
+	//		return $query->row();
+	////		return $row;
+	//		$objek = array(
+	//			'judul_pengumuman' => $row->judul_pengumuman
+	//		);
+	//		return $objek;
+	//	}
 
 	function tesmethod()
 	{
-//		$this->db->select("*");
+		//		$this->db->select("*");
 		$query = $this->db->get("tb_informasi");
-//		return $this->db->get()->result_array();
+		//		return $this->db->get()->result_array();
 
 		return $query->row();
 	}
-	function insertdatetanggal($tb,$datevalue){
-//		$data['date'];
-		return $this->db->insert($tb,$datevalue);
+	function insertdatetanggal($tb, $datevalue)
+	{
+		//		$data['date'];
+		return $this->db->insert($tb, $datevalue);
 	}
-	public function login($email, $password){
-		$query = $this->db->get_where('tb_user', array('user_email'=>$email, 'user_password'=>$password));
+	public function login($email, $password)
+	{
+		$query = $this->db->get_where('tb_user', array('user_email' => $email, 'user_password' => $password));
 		return $query->row_array();
 	}
 }

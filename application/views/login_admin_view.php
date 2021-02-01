@@ -6,13 +6,13 @@
 					<h3 class="panel-title p-5">Login Admin</h3>
 				</div>
 				<div class="panel-body">
-					<form action="" method="post">
+					<form action="<?php echo base_url()?>index.php/Admin/login" method="post">
 						<fieldset>
 							<div class = "form-group">
-								<input class="form-control" placeholder="Enter email">
+								<input type="text" class="form-control" name="useradmin" placeholder="Enter email">
 							</div>
 							<div class = "form-group">
-								<input class="form-control" placeholder="Enter password">
+								<input type="password" class="form-control" name="passadmin" placeholder="Enter password">
 							</div>
 							<input class="btn btn-lg btn-success btn-block" type="submit" value="login">
 
